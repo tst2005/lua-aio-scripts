@@ -13,6 +13,7 @@ local aio = require "aio"
 aio.mode("raw2")
 
 aio.mod("newpackage",		"lib/newpackage.lua")
+aio.mod("isolation.defaults",	"lib/isolation/defaults.lua")
 aio.mod("restricted.debug",	"lib/restricted/debug.lua")
 aio.mod("restricted.bit32",	"lib/restricted/bit32.lua")
 aio.mod("restricted.io",	"lib/restricted/io.lua")
