@@ -58,6 +58,8 @@ mod("bit.numberlua",		"thirdparty/lua-bit-numberlua/lmod/bit/numberlua.lua")
 mod("isolation",		"thirdparty/lua-isolation/isolation.lua")
 mod("lulpeg",			"thirdparty/lulpeg/lulpeg-aio.lua")
 
+mod("cwtest",			"thirdparty/lua-cwtest/cwtest.lua")
+
 mod("lunajson",			"thirdparty/lunajson/lunajson.lua")
 mod("utf8",			"thirdparty/lua-utf8/utf8.lua")
 rawmod("cliargs",		"thirdparty/lua_cliargs/src/cliargs.lua")
