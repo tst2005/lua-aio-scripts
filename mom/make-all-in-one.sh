@@ -49,7 +49,7 @@ mod("30log",			"thirdparty/git/yonaba/30log/30logclean.lua")
 mod("30log-featured",		"thirdparty/lua-featured/30log-featured.lua")
 
 mod("hump.class",		"thirdparty/local/vrld/hump/class.lua")
-mod("hump.class-featured",	"thirdparty/lua-featured/hump-featured.lua")
+mod("hump.class-featured",	"thirdparty/lua-featured/hump/class-featured.lua")
 
 mod("compat_env",		"thirdparty/lua-compat-env/lua/compat_env.lua")
 

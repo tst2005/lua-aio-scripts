@@ -46,11 +46,14 @@ fi) \
 --mod 30log-featured		"thirdparty/lua-featured/30log-featured.lua" \
 \
 --mod hump.class		thirdparty/local/vrld/hump/class.lua \
---mod hump.class-featured	"thirdparty/lua-featured/hump-featured.lua" \
+--mod hump.class-featured	"thirdparty/lua-featured/hump/class-featured.lua" \
 \
 --mod compat_env		thirdparty/lua-compat-env/lua/compat_env.lua \
 \
 --mod bit.numberlua		thirdparty/lua-bit-numberlua/lmod/bit/numberlua.lua \
+\
+--mod "isolation"		"thirdparty/lua-isolation/isolation.lua" \
+--mod "lulpeg"			"thirdparty/lulpeg/lulpeg-aio.lua" \
 \
 --mod lunajson			thirdparty/lunajson/lunajson.lua \
 --mod utf8			thirdparty/lua-utf8/utf8.lua \
@@ -59,8 +62,6 @@ fi) \
 --mod "ser"			"thirdparty/git/gvx/ser/ser.lua" \
 \
 --mod "lube"			"thirdparty/local/bartbes/lube/lube.lua" \
-\
---mod "isolation"		"thirdparty/lua-isolation/isolation.lua" \
 \
 $(if [ -n "$ICHECK" ]; then
 	echo "--icheck"
