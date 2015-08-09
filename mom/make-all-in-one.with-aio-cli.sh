@@ -34,22 +34,21 @@ fi) \
 --mod strict			thirdparty/local/unknown/strict/strict.lua \
 \
 --mod i				lib/i.lua \
---mod featured			lib/featured.lua \
---mod generic			lib/generic.lua \
+--mod featured			"thirdparty/lua-featured/featured.lua" \
 \
 --mod secs			thirdparty/local/bartbes/secs/secs.lua \
---mod secs-featured		lib/secs-featured.lua \
+--mod secs-featured		"thirdparty/lua-featured/secs-featured.lua" \
 \
 --mod middleclass		thirdparty/git/kikito/middleclass/middleclass.lua \
---mod middleclass-featured	lib/middleclass-featured.lua \
+--mod middleclass-featured	"thirdparty/lua-featured/middleclass-featured.lua" \
 \
 --mod 30log			thirdparty/git/yonaba/30log/30logclean.lua \
---mod 30log-featured		lib/30log-featured.lua \
-\
---mod compat_env		thirdparty/lua-compat-env/lua/compat_env.lua \
+--mod 30log-featured		"thirdparty/lua-featured/30log-featured.lua" \
 \
 --mod hump.class		thirdparty/local/vrld/hump/class.lua \
---mod hump.class-featured	lib/hump-featured.lua \
+--mod hump.class-featured	"thirdparty/lua-featured/hump-featured.lua" \
+\
+--mod compat_env		thirdparty/lua-compat-env/lua/compat_env.lua \
 \
 --mod bit.numberlua		thirdparty/lua-bit-numberlua/lmod/bit/numberlua.lua \
 \
