@@ -56,6 +56,8 @@ fi) \
 --mod "lulpeg"			"thirdparty/lulpeg/lulpeg-aio.lua" \
 \
 --mod "cwtest"			"thirdparty/lua-cwtest/cwtest.lua" \
+--mod "pl.strict"		"thirdparty/lua-penlight/lua/pl/strict.lua" \
+--mod "pl.pretty"		"thirdparty/lua-penlight/lua/pl/pretty.lua" \
 \
 --mod lunajson			thirdparty/lunajson/lunajson.lua \
 --mod utf8			thirdparty/lua-utf8/utf8.lua \
