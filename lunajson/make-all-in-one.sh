@@ -19,6 +19,7 @@ rawmod("lunajson._str_lib_lua53", 	"src/lunajson/_str_lib_lua53.lua")
 mod("lunajson.sax", 			"src/lunajson/sax.lua")
 mod("lunajson.decoder",			"src/lunajson/decoder.lua")
 mod("lunajson.encoder",			"src/lunajson/encoder.lua")
+aio.finish()
 aio.code(				"src/lunajson.lua")
 aio.finish()
 ' > lunajson.lua
