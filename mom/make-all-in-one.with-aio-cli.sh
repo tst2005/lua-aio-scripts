@@ -7,7 +7,7 @@ cd -- "$(dirname "$0")" || exit 1
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio-cli
 ALLINONE=./thirdparty/lua-aio/aio-cli
 
-headn=$(grep -nh '^_=nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
+headn=$(grep -nh '^\]\] and nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
 
 ICHECK="";
 while [ $# -gt 0 ]; do
@@ -21,7 +21,7 @@ LUA_PATH="?.lua;thirdparty/lua-?/?.lua;;" \
 "$ALLINONE" \
 --mode "raw2" \
 --shebang			bin/featuredlua \
---codehead $headn		bin/featuredlua \
+--codehead ${headn:-0}		bin/featuredlua \
 \
 $(if [ -n "$ICHECK" ]; then
 	echo "--icheckinit"
@@ -56,16 +56,24 @@ fi) \
 --mod "lulpeg"			"thirdparty/lulpeg/lulpeg-aio.lua" \
 \
 --mod "cwtest"			"thirdparty/lua-cwtest/cwtest.lua" \
---mod "pl.strict"		"thirdparty/lua-penlight/lua/pl/strict.lua" \
+$( # --mod "pl.strict"		"thirdparty/lua-penlight/lua/pl/strict.lua"
+) \
 --mod "pl.pretty"		"thirdparty/lua-penlight/lua/pl/pretty.lua" \
-\
---mod lunajson			thirdparty/lunajson/lunajson.lua \
---mod utf8			thirdparty/lua-utf8/utf8.lua \
---rawmod cliargs		thirdparty/lua_cliargs/src/cliargs.lua \
-\
+--mod "pl.utils"		"thirdparty/lua-penlight/lua/pl/utils.lua" \
+--mod "pl.lexer"		"thirdparty/lua-penlight/lua/pl/lexer.lua" \
+--mod "pl.compat"		"emptymodule.lua" \
+$( # --mod "pl.compat"		"thirdparty/lua-penlight/lua/pl/compat.lua"
+) \
+$( # --mod "telescope"		"thirdparty/git/norman/telescope/telescope.lua"
+) \
+--mod "lunajson"		"thirdparty/lunajson/lunajson.lua" \
+--mod "utf8"			"thirdparty/lua-utf8/utf8.lua" \
+--rawmod "cliargs"		"thirdparty/lua_cliargs/src/cliargs.lua" \
+--mod "alt_getopt"		"thirdparty/lua-alt-getopt/alt_getopt.lua" \
 --mod "ser"			"thirdparty/git/gvx/ser/ser.lua" \
-\
 --mod "lube"			"thirdparty/local/bartbes/lube/lube.lua" \
+$( # --mod "strong"		"thirdparty/strong/strong.lua"
+) \
 \
 $(if [ -n "$ICHECK" ]; then
 	echo "--icheck"

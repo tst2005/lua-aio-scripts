@@ -71,7 +71,7 @@ mod("pl.compat",		"emptymodule.lua")
 mod("lunajson",			"thirdparty/lunajson/lunajson.lua")
 mod("utf8",			"thirdparty/lua-utf8/utf8.lua")
 rawmod("cliargs",		"thirdparty/lua_cliargs/src/cliargs.lua")
-mod("alt_getopt", 		"thirdparty/local/cheusov/lua-alt-getopt-0.7.0/alt_getopt.lua")
+mod("alt_getopt", 		"thirdparty/lua-alt-getopt/alt_getopt.lua")
 mod("ser",			"thirdparty/git/gvx/ser/ser.lua")
 
 mod("lube",			"thirdparty/local/bartbes/lube/lube.lua")
