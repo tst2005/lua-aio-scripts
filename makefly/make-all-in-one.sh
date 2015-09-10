@@ -5,7 +5,7 @@ cd -- "$(dirname "$0")" || exit 1
 # see https://github.com/tst2005/lua-aio
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
 
-headn=$(grep -nh '^_=nil$' "makefly" |head -n 1 |cut -d: -f1)
+headn=$(grep -nh '^\]\] and nil$' "makefly" |head -n 1 |cut -d: -f1)
 
 lua -e '
 local aio = require "aio"

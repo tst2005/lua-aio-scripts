@@ -7,9 +7,8 @@ cd -- "$(dirname "$0")" || exit 1
 
 #headn=$(grep -nh '^_=nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
 
-LUA_PATH="./?.lua;./thirdparty/lua-?/?.lua;;" \
+LUA_PATH="./?.lua;../lua-aio/?.lua;./thirdparty/lua-?/?.lua;;" \
 lua -e '
-
 --require "gro"
 
 local aio = require "aio"
