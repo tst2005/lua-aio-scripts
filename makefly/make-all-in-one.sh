@@ -5,14 +5,16 @@ cd -- "$(dirname "$0")" || exit 1
 # see https://github.com/tst2005/lua-aio
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
 
-headn=$(grep -nh '^\]\] and nil$' "makefly" |head -n 1 |cut -d: -f1)
+#headn=$(grep -nh '^\]\] and nil$' "makefly" |head -n 1 |cut -d: -f1)
 
+LUA_PATH="./?.lua;../lua-aio/?.lua;thirdparty/?/?.lua;thirdparty/lua-?/?.lua;;" \
 lua -e '
 local aio = require "aio"
 aio.mode("raw2")
 
 aio.shebang(			"makefly")
-aio.codehead('"$headn"',	"makefly")
+aio.shellcode("makefly")
+--aio.codehead('"$headn"',	"makefly")
 aio.mod("lib.init",		"lib/init.lua")
 aio.mod("pagination",		"lib/pagination.lua")
 aio.mod("gettext",		"lib/gettext.lua")
