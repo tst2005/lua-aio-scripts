@@ -12,10 +12,11 @@ lua -e '
 local aio = require "aio"
 aio.mode("raw2")
 
-aio.shebang("lmod/xor.lua")
-aio.mod("bit.numberlua", "thirdparty/git/davidm/lua-bit-numberlua/lmod/bit/numberlua.lua")
+aio.shebang(			"lmod/xor.lua")
+aio.shellcode(			"lmod/xor.lua")
+aio.mod("bit.numberlua",	"thirdparty/git/davidm/lua-bit-numberlua/lmod/bit/numberlua.lua")
 aio.finish()
-aio.code("lmod/xor.lua")
+aio.code(			"lmod/xor.lua")
 aio.finish()
 ' > xor
 chmod +x xor

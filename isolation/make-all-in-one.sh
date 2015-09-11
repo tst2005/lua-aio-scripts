@@ -5,8 +5,6 @@ cd -- "$(dirname "$0")" || exit 1
 # see https://github.com/tst2005/lua-aio
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
 
-#headn=$(grep -nh '^_=nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
-
 LUA_PATH="./?.lua;../lua-aio/?.lua;thirdparty/git/tst2005/lua-?/?.lua;;" \
 lua -e '
 local aio = require "aio"

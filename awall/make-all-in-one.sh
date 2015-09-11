@@ -5,8 +5,6 @@ cd -- "$(dirname "$0")" || exit 1
 # see https://github.com/tst2005/lua-aio
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
 
-headn=$(grep -nh '^\]\] and nil$' awall-cli |head -n 1 |cut -d: -f1)
-
 LUA_PATH="./?.lua;./thirdparty/lua-?/?.lua;;" \
 luajit -e '
 require "mom"
@@ -16,7 +14,7 @@ local aio = require "aio"
 aio.mode("raw2")
 
 aio.shebang(			"awall-cli")
-aio.codehead('"${headn:-0}"',	"awall-cli")
+aio.shellcode(			"awall-cli")
 
 aio.luacode("require \"mom\"")
 aio.luacode("require \"gro\"")

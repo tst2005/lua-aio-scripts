@@ -5,8 +5,6 @@ cd -- "$(dirname "$0")" || exit 1
 # see https://github.com/tst2005/lua-aio
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
 
-#headn=$(grep -nh '^_=nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
-
 LUA_PATH="./?.lua;../lua-aio/?.lua;./thirdparty/lua-?/?.lua;;" \
 lua -e '
 --require "gro"
@@ -15,7 +13,7 @@ local aio = require "aio"
 aio.mode("raw2")
 
 aio.shebang(			"bin/luacheck.lua")
---aio.codehead('"$headn"',	"bin/luacheck.lua")
+aio.shellcode(			"bin/luacheck.lua")
 
 aio.mod("luacheck.check",			"src/luacheck/check.lua")
 aio.mod("luacheck.config",			"src/luacheck/config.lua")

@@ -7,8 +7,6 @@ cd -- "$(dirname "$0")" || exit 1
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio-cli
 ALLINONE=./thirdparty/lua-aio/aio-cli
 
-#headn=$(grep -nh '^\]\] and nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
-
 ICHECK="";
 while [ $# -gt 0 ]; do
 	o="$1"; shift

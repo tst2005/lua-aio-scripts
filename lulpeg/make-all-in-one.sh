@@ -8,8 +8,7 @@ cd -- "$(dirname "$0")" || exit 1
 LUA_PATH="./?.lua;./thirdparty/lua-?/?.lua;;" \
 lua -e '
 local aio = require "aio"
-local mod, rawmod = aio.mod, aio.rawmod
-assert( mod and rawmod )
+local mod = assert(aio.mod)
 
 aio.mode("raw2")
 
