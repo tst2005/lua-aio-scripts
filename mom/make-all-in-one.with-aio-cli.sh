@@ -7,7 +7,7 @@ cd -- "$(dirname "$0")" || exit 1
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio-cli
 ALLINONE=./thirdparty/lua-aio/aio-cli
 
-headn=$(grep -nh '^\]\] and nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
+#headn=$(grep -nh '^\]\] and nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
 
 ICHECK="";
 while [ $# -gt 0 ]; do
@@ -20,8 +20,8 @@ done
 LUA_PATH="?.lua;thirdparty/lua-?/?.lua;;" \
 "$ALLINONE" \
 --mode "raw2" \
---shebang			bin/featuredlua \
---codehead ${headn:-0}		bin/featuredlua \
+--shebang			"bin/featuredlua" \
+--shellcode 			"bin/featuredlua" \
 \
 $(if [ -n "$ICHECK" ]; then
 	echo "--icheckinit"

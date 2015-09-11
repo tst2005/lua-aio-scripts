@@ -5,7 +5,7 @@ cd -- "$(dirname "$0")" || exit 1
 # see https://github.com/tst2005/lua-aio
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
 
-headn=$(grep -nh '^\]\] and nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
+#headn=$(grep -nh '^\]\] and nil$' bin/featuredlua |head -n 1 |cut -d: -f1)
 
 ICHECK="";
 while [ $# -gt 0 ]; do
@@ -18,13 +18,15 @@ done
 LUA_PATH="./?.lua;./thirdparty/lua-?/?.lua;;" \
 lua -e 'require "gro"
 local aio = require "aio"
-local mod, rawmod = aio.mod, aio.rawmod
-assert( mod and rawmod )
+local mod = aio.mod
+assert( mod )
 
 aio.mode("raw2")
 
 aio.shebang(			"bin/featuredlua")
-aio.codehead('"$headn"',	"bin/featuredlua")
+--aio.codehead('"$headn"',	"bin/featuredlua")
+aio.shellcode("bin/featuredlua")
+
 
 --$(if [ -n "$ICHECK" ]; then
 --        echo "--icheckinit"
@@ -70,7 +72,7 @@ mod("pl.compat",		"emptymodule.lua")
 
 mod("lunajson",			"thirdparty/lunajson/lunajson.lua")
 mod("utf8",			"thirdparty/lua-utf8/utf8.lua")
-rawmod("cliargs",		"thirdparty/lua_cliargs/src/cliargs.lua")
+aio.rawmod("cliargs",		"thirdparty/lua_cliargs/src/cliargs.lua")
 mod("alt_getopt", 		"thirdparty/lua-alt-getopt/alt_getopt.lua")
 mod("ser",			"thirdparty/git/gvx/ser/ser.lua")
 
