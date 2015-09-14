@@ -5,16 +5,27 @@ cd -- "$(dirname "$0")" || exit 1
 # see https://github.com/tst2005/lua-aio
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
 
-LUA_PATH="./?.lua;../lua-aio/?.lua;./thirdparty/lua-?/?.lua;;" \
+ROCKSPEC=luacheck-scm-1.rockspec
+
+LUA_PATH="./?.lua;../lua-?/?.lua;./thirdparty/lua-?/?.lua;;" \
 lua -e '
 --require "gro"
-
+require"compat_env"
 local aio = require "aio"
 aio.mode("raw2")
 
 aio.shebang(			"bin/luacheck.lua")
 aio.shellcode(			"bin/luacheck.lua")
 
+aio.rock.file("'"$ROCKSPEC"'")
+aio.rock.mod("build.modules")
+aio.finish()
+aio.autoaliases()
+aio.finish()
+aio.rock.code("build.install.bin")
+aio.finish()
+
+--[[
 aio.mod("luacheck.check",			"src/luacheck/check.lua")
 aio.mod("luacheck.config",			"src/luacheck/config.lua")
 aio.mod("luacheck.options",			"src/luacheck/options.lua")
@@ -24,13 +35,13 @@ aio.mod("luacheck.lexer",			"src/luacheck/lexer.lua")
 aio.mod("luacheck.fs",				"src/luacheck/fs.lua")
 aio.mod("luacheck.expand_rockspec",		"src/luacheck/expand_rockspec.lua")
 aio.mod("luacheck.multithreading",		"src/luacheck/multithreading.lua")
-aio.mod("luacheck.stds",				"src/luacheck/stds.lua")
+aio.mod("luacheck.stds",			"src/luacheck/stds.lua")
 aio.mod("luacheck.filter",			"src/luacheck/filter.lua")
-aio.mod("luacheck.main",				"src/luacheck/main.lua")
+aio.mod("luacheck.main",			"src/luacheck/main.lua")
 aio.mod("luacheck.inline_options",		"src/luacheck/inline_options.lua")
 aio.mod("luacheck.linearize",			"src/luacheck/linearize.lua")
 aio.mod("luacheck.analyze",			"src/luacheck/analyze.lua")
-aio.mod("luacheck.reachability",			"src/luacheck/reachability.lua")
+aio.mod("luacheck.reachability",		"src/luacheck/reachability.lua")
 aio.mod("luacheck.core_utils",			"src/luacheck/core_utils.lua")
 aio.mod("luacheck.version",			"src/luacheck/version.lua")
 aio.mod("luacheck.format",			"src/luacheck/format.lua")
@@ -44,7 +55,9 @@ aio.finish()
 
 aio.code(				"bin/luacheck.lua")
 aio.finish()
-' > luacheck-aio.lua
+]]--
 
-chmod +x luacheck-aio.lua
+' > luacheck-aio2.lua
+
+chmod +x luacheck-aio2.lua
 
