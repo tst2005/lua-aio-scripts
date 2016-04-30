@@ -9,6 +9,7 @@ All scripts of projects using [lua-aio](https://github.com/tst2005/lua-aio)
  * [ ] [l2l](https://github.com/tst2005/l2l)
  * [x] [LDoc](https://github.com/tst2005/ldoc/tree/allinone): [bin/ldoc](https://github.com/tst2005/ldoc/blob/allinone/bin/ldoc)
  * [ ] [Leg](https://github.com/tst2005/leg)
+ * [ ] lockbox
  * [ ] [LPegLJ](https://github.com/tst2005/lpeglj)
  * [ ] [luacheck](https://github.com/tst2005/luacheck)
  * [ ] [LUBE](https://github.com/tst2005/love-misc-libs/tree/all-in-one/LUBE)
