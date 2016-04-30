@@ -13,13 +13,16 @@ while [ $# -gt 0 ]; do
 	esac
 done
 
-LUA_PATH="./?.lua;./thirdparty/lua-?/?.lua;;" \
+LUA_PATH="./?.lua;./thirdparty/lua-?/?.lua;thirdparty/lua-compat-env/lua/?.lua;;" \
 lua -e 'require "gro"
 local aio = require "aio"
 local mod = aio.mod
 assert( mod )
 
 aio.mode("raw2")
+
+aio.rock.auto("rockspecs/draft.rockspecs", nil)
+--[=[
 
 aio.shebang(			"bin/featuredlua")
 aio.shellcode(			"bin/featuredlua")
@@ -75,6 +78,8 @@ mod("ser",			"thirdparty/git/gvx/ser/ser.lua")
 
 mod("lube",			"thirdparty/local/bartbes/lube/lube.lua")
 
+mod("sha1",			"thirdparty/lua-sha1/sha1.lua")
+
 --mod("strong",			"thirdparty/strong/strong.lua")
 
 --$(if [ -n "$ICHECK" ]; then
@@ -82,6 +87,8 @@ mod("lube",			"thirdparty/local/bartbes/lube/lube.lua")
 --fi)
 aio.finish()
 --aio.luacode( [[return { _VERSION = "mom 0.1.'"$(date +%Y%m%d)"'", }]])
+
+]=]--
 
 ' > mom.lua
 
