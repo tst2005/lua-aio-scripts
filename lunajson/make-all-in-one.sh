@@ -8,7 +8,7 @@ cd -- "$(dirname "$0")" || exit 1
 LUA_PATH="./?.lua;../lua-?/?.lua;thirdparty/git/tst2005/lua-?/?.lua;;" \
 lua -e '
 local aio = require "aio"
-aio.mode("raw2")
+--aio.mode("raw2")
 
 aio.rock.auto("rockspecs/lunajson-1.1-0.rockspec", "lunajson")
 --[[

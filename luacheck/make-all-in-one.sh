@@ -10,9 +10,8 @@ ROCKSPEC=luacheck-scm-1.rockspec
 LUA_PATH="./?.lua;../lua-?/?.lua;./thirdparty/lua-?/?.lua;;" \
 lua -e '
 --require "gro"
-require"compat_env"
 local aio = require "aio"
-aio.mode("raw2")
+--aio.mode("raw2")
 
 aio.shebang(			"bin/luacheck.lua")
 aio.shellcode(			"bin/luacheck.lua")
@@ -57,7 +56,7 @@ aio.code(				"bin/luacheck.lua")
 aio.finish()
 ]]--
 
-' > luacheck-aio2.lua
+' > luacheck-aio.lua
 
-chmod +x luacheck-aio2.lua
+chmod +x luacheck-aio.lua
 

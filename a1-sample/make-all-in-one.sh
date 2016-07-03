@@ -14,6 +14,7 @@ aio.mode("raw2")
 
 aio.code("thirdparty/a1-a1/package.lua") -- emulate the missing require/package
 aio.mod("a1", "thirdparty/a1-a1/a1.lua")
+aio.mod("mini.class", "mini.class.lua")
 aio.finish()
 
 aio.code("sample.lua")
@@ -33,7 +34,6 @@ aio.finish()
 #		git clone https://github.com/tst2005/a1-fake
 #	cd ..
 #	ln -s thirdparty/lua-aio-scripts/a1-sample/make-all-in-one.sh make-all-in-one.sh
-#	ln -s thirdparty/lua-aio-scripts/a1-sample/modified.rockspec modified.rockspec
 #	chmod +x make-all-in-one.sh
 #	./make-all-in-one.sh
 
