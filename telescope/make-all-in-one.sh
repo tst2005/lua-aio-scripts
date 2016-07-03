@@ -18,13 +18,12 @@ lua -e '
 chmod +x aio/tsc
 
 # done with:
-#	git clone https://github.com/stevedonovan/LDoc ldoc FIXME <------------------------------------
-#	cd ldoc
+#	git clone https://github.com/norman/telescope telescope
+#	cd telescope
 #	mkdir thirdparty
 #	cd thirdparty
 #	git clone https://github.com/tst2005/lua-aio
 #	git clone https://github.com/tst2005/lua-aio-scripts
-#	git clone https://github.com/tst2005/lua-compat-env ; ln -s lua-compat-env/lua lua-compat_env
 #	cd ..
 #	ln -s thirdparty/lua-aio-scripts/telescope/make-all-in-one.sh make-all-in-one.sh
 #	ln -s thirdparty/lua-aio-scripts/telescope/modified.rockspec modified.rockspec

@@ -5,7 +5,7 @@ cd -- "$(dirname "$0")" || exit 1
 # see https://github.com/tst2005/lua-aio
 # wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
 
-for mode in lua raw raw2; do
+for mode in lua raw2; do
 
 LUA_PATH="./?.lua;./thirdparty/lua-?/?.lua;../lua-aio/?.lua;;" \
 lua -e '

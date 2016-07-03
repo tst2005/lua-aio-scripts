@@ -33,7 +33,6 @@ cp -a aio/ldoc-full.lua bin/ldoc
 #	cd thirdparty
 #	git clone https://github.com/tst2005/lua-aio
 #	git clone https://github.com/tst2005/lua-aio-scripts
-#	git clone https://github.com/tst2005/lua-compat-env ; ln -s lua-compat-env/lua lua-compat_env
 #	git clone //github.com/mpeterv/markdown
 #	git clone https://github.com/tst2005/lua-penlight ; cd lua-penlight ; git co allinone ; cd ..
 #	cd ..
