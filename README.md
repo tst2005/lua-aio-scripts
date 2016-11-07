@@ -6,6 +6,7 @@ All scripts of projects using [lua-aio](https://github.com/tst2005/lua-aio)
  * [ ] [awall](https://github.com/tst2005/awall)
  * [ ] [hate](https://github.com/tst2005/hate/tree/allinone)
  * [x] [graphql](https://github.com/tst2005/lua-graphql/tree/allinone/aio) v0.2.0
+ * [x] [gzloader](https://github.com/tst2005/lua-gzloader/)
  * [ ] [isolation](https://github.com/tst2005/lua-isolation)
  * [ ] [l2l](https://github.com/tst2005/l2l)
  * [x] [LDoc](https://github.com/tst2005/ldoc/tree/allinone): [bin/ldoc](https://github.com/tst2005/ldoc/blob/allinone/bin/ldoc)
