@@ -2,11 +2,11 @@
 
 All scripts of projects using [lua-aio](https://github.com/tst2005/lua-aio)
 
-* [x] <-- means recent/up-to-date
-* [x] [lockbox](https://github.com/tst2005/lua-lockbox) ; full lockbox but also sha1sum only and sha256sum only
-* [x] [ljsyscall](https://github.com/tst2005/ljsyscall/) (linux-only bundle)
-  * [ ] [ljsyscall](https://github.com/tst2005/ljsyscall/) (full bundle)
-* [x] [lunajson](https://github.com/tst2005/lunajson)
+Up-to-date :
+* [x] [lockbox](https://github.com/tst2005/lua-aio-scripts/tree/master/lockbox) : full & sha1sum-only & sha256sum-only
+* [ ] ljsyscall full
+  * [x] [ljsyscall/linux-only](https://github.com/tst2005/lua-aio-scripts/tree/master/ljsyscall)
+* [x] [lunajson](https://github.com/tst2005/lua-aio-scripts/tree/master/lunajson)
 
 To update ... :
  * [ ] [awall](https://github.com/tst2005/awall)
@@ -29,7 +29,7 @@ To update ... :
  * [?] [telescope](https://github.com/tst2005/telescope/tree/allinone): [tsc](https://github.com/tst2005/telescope/blob/allinone/aio/tsc)
  * [?] [xor](https://github.com/tst2005/xor)
 
-# convention changed
+# Name convention changed
 
 Change the name of the subdirectory to put the bundle
 * do not use `aio` directory name anymore to avoid loading conflict of the `aio` module it-self.
