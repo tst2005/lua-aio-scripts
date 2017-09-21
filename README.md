@@ -11,23 +11,23 @@ Up-to-date :
 * [x] [LuLPeg](https://github.com/tst2005/lua-aio-scripts/tree/master/lulpeg)
 
 To update ... :
- * [ ] [awall](https://github.com/tst2005/awall)
- * [ ] [hate](https://github.com/tst2005/hate/tree/allinone)
- * [?] [graphql](https://github.com/tst2005/lua-graphql/tree/allinone/aio) v0.2.0
- * [?] [gzloader](https://github.com/tst2005/lua-gzloader/)
- * [ ] [isolation](https://github.com/tst2005/lua-isolation)
- * [ ] [l2l](https://github.com/tst2005/l2l)
- * [ ] [Leg](https://github.com/tst2005/leg)
- * [ ] [LPegLJ](https://github.com/tst2005/lpeglj)
- * [?] [luacheck](https://github.com/tst2005/luacheck)
- * [ ] [LUBE](https://github.com/tst2005/love-misc-libs/tree/all-in-one/LUBE)
- * [?] [lustache](https://github.com/tst2005/lustache)
- * [ ] lusty (a try)
- * [ ] [makefly](https://github.com/tst2005/makefly)
- * [ ] [mom](https://github.com/tst2005/mom)
- * [?] [penlight](https://github.com/tst2005/lua-penlight/tree/allinone): [pl.lua](https://github.com/tst2005/lua-penlight/blob/allinone/pl.lua)
- * [?] [telescope](https://github.com/tst2005/telescope/tree/allinone): [tsc](https://github.com/tst2005/telescope/blob/allinone/aio/tsc)
- * [?] [xor](https://github.com/tst2005/xor)
+* [ ] [awall](https://github.com/tst2005/awall)
+* [ ] [hate](https://github.com/tst2005/hate/tree/allinone)
+* [?] [graphql](https://github.com/tst2005/lua-graphql/tree/allinone/aio) v0.2.0
+* [?] [gzloader](https://github.com/tst2005/lua-gzloader/)
+* [ ] [isolation](https://github.com/tst2005/lua-isolation)
+* [ ] [l2l](https://github.com/tst2005/l2l)
+* [ ] [Leg](https://github.com/tst2005/leg)
+* [ ] [LPegLJ](https://github.com/tst2005/lpeglj)
+* [?] [luacheck](https://github.com/tst2005/luacheck)
+* [ ] [LUBE](https://github.com/tst2005/love-misc-libs/tree/all-in-one/LUBE)
+* [?] [lustache](https://github.com/tst2005/lustache)
+* [ ] lusty (a try)
+* [ ] [makefly](https://github.com/tst2005/makefly)
+* [ ] [mom](https://github.com/tst2005/mom)
+* [?] [penlight](https://github.com/tst2005/lua-penlight/tree/allinone): [pl.lua](https://github.com/tst2005/lua-penlight/blob/allinone/pl.lua)
+* [?] [telescope](https://github.com/tst2005/telescope/tree/allinone): [tsc](https://github.com/tst2005/telescope/blob/allinone/aio/tsc)
+* [?] [xor](https://github.com/tst2005/xor)
 
 # Name convention changed
 
