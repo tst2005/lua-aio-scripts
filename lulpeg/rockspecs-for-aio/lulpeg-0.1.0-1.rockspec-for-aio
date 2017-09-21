@@ -1,0 +1,39 @@
+package = "lulpeg"
+version = "0.1.0-1"
+
+source = {
+  url = "git://github.com/pygy/LuLPeg",
+}
+
+description = {
+  summary     = "LuLPeg",
+  detailed    = "LuLPeg, a pure Lua port of LPeg, Roberto Ierusalimschy's Parsing Expression Grammars library. Copyright (C) Pierre-Yves Gerardy.",
+  license     = "The Romantic WTF public license",
+  maintainer  = "pygy",
+}
+
+dependencies = {
+  "lua >= 5.1",
+}
+
+build = {
+  type    = "builtin",
+  modules = {
+    ["lulpeg"] = "src/init.lua",
+    ["datastructures"] = "src/datastructures.lua",
+    ["compiler"] = "src/compiler.lua",
+    ["printers"] = "src/printers.lua",
+    ["re"] = "src/re.lua",
+    ["evaluator"] = "src/evaluator.lua",
+    ["constructors"] = "src/constructors.lua",
+    ["locale"] = "src/locale.lua",
+    ["compat"] = "src/compat.lua",
+    ["factorizer"] = "src/factorizer.lua",
+    ["analizer"] = "src/analizer.lua",
+    ["API"] = "src/API.lua",
+    ["util"] = "src/util.lua",
+    ["match"] = "src/match.lua",
+    ["charsets"] = "src/charsets.lua",
+    ["optimizer"] = "src/optimizer.lua",
+  }
+}

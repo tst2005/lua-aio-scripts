@@ -8,7 +8,7 @@ Up-to-date :
   * [x] [ljsyscall/linux-only](https://github.com/tst2005/lua-aio-scripts/tree/master/ljsyscall)
 * [x] [lunajson](https://github.com/tst2005/lua-aio-scripts/tree/master/lunajson)
 * [x] [LDoc](https://github.com/tst2005/lua-aio-scripts/tree/master/ldoc)
-
+* [x] [LuLPeg](https://github.com/tst2005/lua-aio-scripts/tree/master/lulpeg)
 
 To update ... :
  * [ ] [awall](https://github.com/tst2005/awall)
@@ -21,7 +21,6 @@ To update ... :
  * [ ] [LPegLJ](https://github.com/tst2005/lpeglj)
  * [?] [luacheck](https://github.com/tst2005/luacheck)
  * [ ] [LUBE](https://github.com/tst2005/love-misc-libs/tree/all-in-one/LUBE)
- * [ ] [LuLPeg](https://github.com/tst2005/lulpeg)
  * [?] [lustache](https://github.com/tst2005/lustache)
  * [ ] lusty (a try)
  * [ ] [makefly](https://github.com/tst2005/makefly)

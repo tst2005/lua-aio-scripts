@@ -1,12 +1,19 @@
 #!/bin/sh
 
-cd -- "$(dirname "$0")" || exit 1
+[ -d generated-bundle ] || mkdir generated-bundle
 
-# see https://github.com/tst2005/lua-aio
-# wget https://raw.githubusercontent.com/tst2005/lua-aio/aio.lua
+LUA_PATH="./?.lua;./?/init.lua;./lua-?/generated-bundle/?.lua;;"
 
-LUA_PATH="./?.lua;./thirdparty/lua-?/?.lua;;" \
-lua -e '
+LUA_PATH="$LUA_PATH" \
+${LUA:-lua} -e '
+require"aio".rock.auto("bundle-setup/rockspecs-for-aio/lulpeg-0.1.0-1.rockspec-for-aio", "lulpeg")
+' > generated-bundle/lulpeg.lua
+
+
+if false; then
+
+LUA_PATH="$LUA_PATH" \
+${LUA:-lua} -e '
 local aio = require "aio"
 local mod = assert(aio.mod)
 
@@ -35,4 +42,4 @@ aio.code(			"src/init.lua")
 aio.finish()
 ' > lulpeg-aio.lua
 
-
+fi
