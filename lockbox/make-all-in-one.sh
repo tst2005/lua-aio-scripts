@@ -15,13 +15,13 @@ cd -- "$(dirname "$0")" || exit 1
 # ( git pull --all )
 # ( git branch )
 # git checkout allinone-sha1sum
-# wget 'https://github.com/tst2005/lua-compat-env/raw/master/lua/compat_env.lua'
+# ( wget 'https://github.com/tst2005/lua-compat-env/raw/master/lua/compat_env.lua' )
 # wget 'https://github.com/tst2005/lua-aio-scripts/raw/master/lockbox/make-all-in-one.sh'
 # sh make-all-in-one.sh
 # LUA=lua sh make-all-in-one.sh
 # LUA=luajit2.1 sh make-all-in-one.sh
 
-[ -d aio ] || mkdir aio
+[ -d generated-bundle ] || mkdir generated-bundle
 
 LUA_PATH="./?.lua;./?/init.lua;../lua-?/?.lua;thirdparty/git/tst2005/lua-?/?.lua;;" \
 ${LUA:-lua} -e '
@@ -29,11 +29,17 @@ local aio = require "aio"
 aio.mode("raw2")
 
 aio.rock.auto("rockspecs/lockbox-0.1.0-0.rockspec", "lockbox")
-' > aio/lockbox.lua
+' > generated-bundle/lockbox.lua
 
 [ -d aio/sha1sum ] || mkdir aio/sha1sum
 LUA_PATH="./?.lua;../lua-?/?.lua;thirdparty/git/tst2005/lua-?/?.lua;;" \
 ${LUA:-lua} -e '
 require "aio".rock.auto("rockspecs-for-aio/sha1sum-minimaldeps.rockspec", "sha1sum")
-' > aio/sha1sum/sha1sum.lua
+' > generated-bundle/sha1sum/sha1sum.lua
+
+[ -d aio/sha256sum ] || mkdir aio/sha256sum
+LUA_PATH="./?.lua;../lua-?/?.lua;thirdparty/git/tst2005/lua-?/?.lua;;" \
+${LUA:-lua} -e '
+require "aio".rock.auto("rockspecs-for-aio/sha256sum-minimaldeps.rockspec", "sha256sum")
+' > generated-bundle/sha256sum/sha256sum.lua
 
