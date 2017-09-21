@@ -1,18 +1,15 @@
 #!/bin/sh
 
-# see https://github.com/tst2005/lua-aio-script
+# see https://github.com/tst2005/lua-aio-scripts
 
 # mkdir tmp
 # cd tmp
 
 # git clone https://github.com/tst2005/ljsyscall
 # cd ljsyscall
-
 # git clone https://github.com/tst2005/lua-aio
 # git clone https://github.com/tst2005/lua-aio-scripts
-
-# ( ln -s lua-aio/generated-bundle/aio.lua aio.lua )
-# ln -s lua-aio-scripts/lockbox bundle-setup
+# ln -s lua-aio-scripts/ljsyscall bundle-setup
 
 # sh bundle-setup/make-all-in-one.sh
 # LUA=lua sh bundle-setup/make-all-in-one.sh
