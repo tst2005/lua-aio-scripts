@@ -19,7 +19,7 @@ dependencies = {
 build = {
 	type = 'builtin',
 	modules = {
-		sha1sum = 'bundle/sha1sum.lua',
+		sha1sum = 'bundle-setup/sha1sum.lua',
 
 		['lockbox'] = 'lockbox/init.lua',
 --		['lockbox.digest.sha2_224'] = 'lockbox/digest/sha2_224.lua',
