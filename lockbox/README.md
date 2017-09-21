@@ -15,4 +15,7 @@ sh bundle-setup/make-all-in-one.sh
 #LUA=lua sh bundle-setup/make-all-in-one.sh
 # or
 #LUA=luajit2.1 sh bundle-setup/make-all-in-one.sh
+
+# show the result file(s)
+ls -l generated-bundle/
 ```
