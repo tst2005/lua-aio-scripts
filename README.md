@@ -7,6 +7,8 @@ Up-to-date :
 * [ ] ljsyscall full
   * [x] [ljsyscall/linux-only](https://github.com/tst2005/lua-aio-scripts/tree/master/ljsyscall)
 * [x] [lunajson](https://github.com/tst2005/lua-aio-scripts/tree/master/lunajson)
+* [x] [LDoc](https://github.com/tst2005/lua-aio-scripts/tree/master/ldoc)
+
 
 To update ... :
  * [ ] [awall](https://github.com/tst2005/awall)
@@ -15,7 +17,6 @@ To update ... :
  * [?] [gzloader](https://github.com/tst2005/lua-gzloader/)
  * [ ] [isolation](https://github.com/tst2005/lua-isolation)
  * [ ] [l2l](https://github.com/tst2005/l2l)
- * [?] [LDoc](https://github.com/tst2005/ldoc/tree/allinone): [bin/ldoc](https://github.com/tst2005/ldoc/blob/allinone/bin/ldoc)
  * [ ] [Leg](https://github.com/tst2005/leg)
  * [ ] [LPegLJ](https://github.com/tst2005/lpeglj)
  * [?] [luacheck](https://github.com/tst2005/luacheck)
