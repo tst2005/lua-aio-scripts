@@ -4,11 +4,12 @@ All scripts of projects using [lua-aio](https://github.com/tst2005/lua-aio)
 
 Up-to-date :
 * [x] [lockbox](https://github.com/tst2005/lua-aio-scripts/tree/master/lockbox) : full & sha1sum-only & sha256sum-only
-* [ ] ljsyscall full
+* [x] ljsyscall full
   * [x] [ljsyscall/linux-only](https://github.com/tst2005/lua-aio-scripts/tree/master/ljsyscall)
 * [x] [lunajson](https://github.com/tst2005/lua-aio-scripts/tree/master/lunajson)
 * [x] [LDoc](https://github.com/tst2005/lua-aio-scripts/tree/master/ldoc)
 * [x] [LuLPeg](https://github.com/tst2005/lua-aio-scripts/tree/master/lulpeg)
+* [x] [obey](https://github.com/tst2005/lua-aio-scripts/tree/master/obey)
 
 To update ... :
 * [ ] [awall](https://github.com/tst2005/awall)
